@@ -1,0 +1,15 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 100%;
+  background-color: #4c4c4c;
+  width: 100vw;
+  padding: 0;
+  height: 50px;
+}
+.navbar-cimg_img {
+  justify-content: center;
+  padding-left: 10px;
+}

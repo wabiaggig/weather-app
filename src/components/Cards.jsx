@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "./Card";
-import { Tarjetas } from "../styles/Cards";
+import "../styles/Cards.css";
 
 export default function Cards({ cities }) {
   // acá va tu código
   // tip, podés usar un map
   return (
-    <Tarjetas>
+    <div className="container">
       {cities?.map((ciudad) => (
         <Card
           key={ciudad.id}
@@ -17,6 +17,6 @@ export default function Cards({ cities }) {
           onClose={() => alert(ciudad.name)}
         />
       ))}
-    </Tarjetas>
+    </div>
   );
 }

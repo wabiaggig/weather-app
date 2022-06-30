@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Card from "./components/Card";
 import Nav from "./components/Nav";
 
 const apiKey = "";
@@ -34,7 +33,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <Card />
+      <Nav />
     </div>
   );
 }

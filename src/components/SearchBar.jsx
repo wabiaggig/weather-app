@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Input, Button, Search } from "../styles/SearchBar";
 
 export default function SearchBar({ onSearch }) {
   // acá va tu código
@@ -10,21 +9,22 @@ export default function SearchBar({ onSearch }) {
   }
 
   return (
-    <Search>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          onSearch();
-        }}
-      >
-        <Input
-          type="text"
-          placeholder="Ciudad..."
-          value={city}
-          onChange={handleInputChange}
-        />
-        <Button onClick={onSearch}>Agregar</Button>
-      </form>
-    </Search>
+    <form
+      className="search"
+      id="search"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSearch();
+      }}
+    >
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Ciudad..."
+        value={city}
+        onChange={handleInputChange}
+      />
+      <input className="search-button" type="submit" value="Buscar" />
+    </form>
   );
 }
